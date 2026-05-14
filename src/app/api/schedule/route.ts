@@ -22,8 +22,7 @@ export async function POST(request: Request) {
                 reason,
                 type,
                 drivers,
-                date,
-                departureTime,
+                departureDate: date,
                 returnTime,
                 needsTrailer,
                 status: 'PENDING'
