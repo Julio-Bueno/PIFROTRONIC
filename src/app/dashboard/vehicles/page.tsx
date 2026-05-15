@@ -1,8 +1,9 @@
+
 import { prisma } from '../../../../lib/prisma';
 import { saveVehicle, deleteVehicle } from './actions';
 
 export default async function VehiclesPage() {
-  const vehicles = await prisma.vehicle.findMany({ orderBy: { model: 'asc' } });
+  let vehicles = await prisma.vehicle.findMany({ orderBy: { model: 'asc' } });
 
   return (
     <div className="p-8 max-w-4xl mx-auto">
